@@ -12,18 +12,14 @@ import java.util.List;
 @RequestMapping(value = "/get")
 public class HelloController {
 
-	@GetMapping( value = "/hello")
-	public String printWelcome(Model model) {
-		List<String> messages = new ArrayList<>();
-		messages.add("Hello!");
-		messages.add("I'm Spring MVC application");
-		messages.add("5.2.0 version by sep'19 ");
-		model.addAttribute("messages", messages);
-		return "index";
-	}
+    @GetMapping(value = "/hello")
+    public String printWelcome(Model model) {
+        List<String> messages = new ArrayList<>();
+        messages.add("Hello!");
+        messages.add("I'm Spring MVC application");
+        messages.add("5.2.0 version by sep'19 ");
+        model.addAttribute("messages", messages);
 
-	@GetMapping(value = "/car")
-	public String printCars(Model model) {
-		return "car";
-	}
+        return "index";
+    }
 }
