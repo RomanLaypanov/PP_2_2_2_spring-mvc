@@ -53,10 +53,13 @@
 
     <tr th:each="car : ${cars}">
         <td th:text="${car.getModel()}">Model</td>
-        <td th:text="${car.getColor()}">Color></td>
+        <td th:text="${car.getColor()}">Color</td>
         <td th:text="${car.getPrice()}">Price</td>
     </tr>
 </table>
+<br/>
+<span>Количество машин: <span th:text="${number}"></span></span>
+
 
 </body>
 </html>
