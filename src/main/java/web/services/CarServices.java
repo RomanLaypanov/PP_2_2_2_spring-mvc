@@ -2,23 +2,10 @@ package web.services;
 
 import web.model.Car;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class CarServices {
-    public List<Car> carCreat() {
-        List<Car> carList = new ArrayList<>(10);
+public interface CarServices {
+    List<Car> carCreat();
 
-        carList.add(new Car("Mercedes-Benz", "Black", 7_900_000));
-        carList.add(new Car("BMW", "White", 5_600_000));
-        carList.add(new Car("Volkswagen", "Silver", 1_200_000));
-        carList.add(new Car("Ford", "Yellow", 790_000));
-        carList.add(new Car("Kia", "Grey", 2_300_000));
-
-        return carList;
-    }
-
-    public int quantityCarsFromList() {
-        return carCreat().size();
-    }
+    int quantityCarsFromList();
 }
